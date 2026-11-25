@@ -1,0 +1,33 @@
+{
+  "babyName": "이연우",
+  "shortName": "연우",
+  "birthDate": "2025년 12월 4일생",
+  "parents": {
+    "father": "이진희",
+    "mother": "최민정"
+  },
+  "greeting": {
+    "badge": "FIRST BIRTHDAY",
+    "title": "이연우\n첫돌 잔치에 초대합니다",
+    "subtitle": "2026년 12월 5일 (토) · 1부 오전 11시\n대구 에이엠소반 3층 에이엠 홀",
+    "message": "열두 달의 계절을 지나\n연우가 어느덧 첫 번째 생일을 맞이했습니다.\n\n작고 여린 품으로 찾아온 아이가\n많은 분들의 사랑과 응원 속에서\n건강하고 밝게 자라왔습니다.\n\n소중한 걸음을 내디딜 연우의 첫 생일에\n함께 자리하시어 따뜻한 축복을 나누어 주시면\n더없는 기쁨으로 간직하겠습니다."
+  },
+  "calendar": {
+    "year": 2026,
+    "month": 12,
+    "day": 5,
+    "dateText": "2026년 12월 5일 토요일",
+    "timeText": "1부 오전 11시 타임",
+    "hallText": "에이엠소반 3층 에이엠 홀"
+  },
+  "location": {
+    "name": "에이엠소반 · 에이엠 홀",
+    "address": "대구 달서구 상원로 163, 3층",
+    "copyAddress": "대구 달서구 상원로 163",
+    "naverMap": "https://map.naver.com/p/search/%EB%8C%80%EA%B5%AC%20%EB%8B%AC%EC%84%9C%EA%B5%AC%20%EC%83%81%EC%9B%90%EB%A1%9C%20163%20%EC%97%90%EC%9D%B4%EC%97%A0%EC%86%8C%EB%B0%98",
+    "kakaoMap": "https://map.kakao.com/?q=%EB%8C%80%EA%B5%AC%20%EB%8B%AC%EC%84%9C%EA%B5%AC%20%EC%83%81%EC%9B%90%EB%A1%9C%20163%20%EC%97%90%EC%9D%B4%EC%97%A0%EC%86%8C%EB%B0%98",
+    "parkingTitle": "주차장 진입 안내",
+    "parkingMain": "아파트 단지 맞은편(조암남로10길 방면) 주차장 큰 출입구로 진입하셔야 주차 가능합니다.",
+    "parkingSub": "상원로 1층 화로38 옆 좁은 입구로는 주차 진입이 어렵습니다."
+  }
+}
