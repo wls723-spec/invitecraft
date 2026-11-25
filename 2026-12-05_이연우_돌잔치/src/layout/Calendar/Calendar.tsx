@@ -2,8 +2,6 @@ import styled from '@emotion/styled';
 import data from '@/data.json';
 
 const WEEKDAYS = ['일', '월', '화', '수', '목', '금', '토'];
-
-// 2026년 12월 1일은 화요일(index 2), 총 31일
 const DEC_2026_LEADING_BLANKS = 2;
 const DEC_2026_DAYS = 31;
 
@@ -21,7 +19,7 @@ const Calendar = () => {
   return (
     <CalendarWrapper>
       <MonthHeader>
-        {calendar.year}. {calendar.month}
+        {calendar.year} . {calendar.month}
       </MonthHeader>
       <Grid>
         {WEEKDAYS.map((day, idx) => (
@@ -58,14 +56,15 @@ const CalendarWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
 `;
 
 const MonthHeader = styled.div`
-  font-family: 'HSSanTokki20-Regular', serif;
-  font-size: 1.2rem;
-  color: #2f2120;
-  letter-spacing: 0.06em;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--ink);
+  margin-bottom: 18px;
 `;
 
 const Grid = styled.div`
@@ -74,28 +73,28 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   row-gap: 6px;
-  padding: 14px 10px;
-  border-radius: 14px;
-  background-color: #fafbf8;
-  border: 1px solid #e7ede0;
+  padding: 18px 4px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 `;
 
 const WeekdayCell = styled.div<{ dayIndex: number }>`
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding-bottom: 6px;
+  font-size: 0.76rem;
+  font-weight: 500;
+  padding-bottom: 8px;
   color: ${(props) =>
-    props.dayIndex === 0 ? '#d97a96' : props.dayIndex === 6 ? '#6b7c65' : '#6e6462'};
+    props.dayIndex === 0 ? '#a66d63' : props.dayIndex === 6 ? '#53687e' : 'var(--muted)'};
 `;
 
 const DayCell = styled.div<{ dayIndex: number }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 34px;
+  height: 36px;
   font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
   color: ${(props) =>
-    props.dayIndex === 0 ? '#d97a96' : props.dayIndex === 6 ? '#5e7059' : '#3a2e2c'};
+    props.dayIndex === 0 ? '#a66d63' : props.dayIndex === 6 ? '#53687e' : 'var(--ink)'};
 `;
 
 const DayBadge = styled.span<{ isEventDay: boolean }>`
@@ -105,26 +104,26 @@ const DayBadge = styled.span<{ isEventDay: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) => (props.isEventDay ? '#e88ca6' : 'transparent')};
+  background-color: ${(props) => (props.isEventDay ? 'var(--accent)' : 'transparent')};
   color: ${(props) => (props.isEventDay ? '#ffffff' : 'inherit')};
-  font-weight: ${(props) => (props.isEventDay ? 700 : 400)};
-  box-shadow: ${(props) =>
-    props.isEventDay ? '0 3px 10px rgba(232, 140, 166, 0.42)' : 'none'};
+  font-weight: ${(props) => (props.isEventDay ? 600 : 400)};
 `;
 
 const SummaryBox = styled.div`
+  margin-top: 22px;
   display: flex;
   flex-direction: column;
   gap: 4px;
 `;
 
 const SummaryMain = styled.div`
+  font-family: var(--font-serif);
   font-size: 1rem;
   font-weight: 700;
-  color: #2f2120;
+  color: var(--ink);
 `;
 
 const SummarySub = styled.div`
-  font-size: 0.92rem;
-  color: #5b504e;
+  font-size: 0.88rem;
+  color: var(--muted);
 `;

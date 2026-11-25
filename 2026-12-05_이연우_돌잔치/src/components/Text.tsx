@@ -1,40 +1,41 @@
 import styled from '@emotion/styled';
 
-export const Heading1 = styled.h2`
-  font-family: 'HSSanTokki20-Regular', serif;
-  font-size: 1.45rem;
-  font-weight: 400;
-  margin: 0 0 18px;
-  color: #d97a96;
-  letter-spacing: 0.02em;
-  white-space: pre-line;
+export const Eyebrow = styled.span`
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
 `;
 
-export const PointTitle = styled.h3`
-  font-family: 'HSSanTokki20-Regular', serif;
-  font-size: 1.15rem;
-  font-weight: 400;
-  line-height: 1.4;
-  margin: 0 0 6px;
-  color: #d97a96;
+export const SectionTitle = styled.h2`
+  font-family: var(--font-serif);
+  font-size: 1.38rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 26px;
   white-space: pre-line;
 `;
 
 export const Paragraph = styled.p`
-  font-size: 0.98rem;
-  line-height: 2.05rem;
-  color: #3a2e2c;
+  font-family: var(--font-serif);
+  font-size: 0.96rem;
+  line-height: 2.15;
+  color: var(--ink-soft);
   margin: 0;
   white-space: pre-line;
   word-break: keep-all;
 `;
 
-export const Caption = styled.p<{ textAlign?: string }>`
-  font-size: 0.92rem;
+export const Caption = styled.p`
+  font-size: 0.9rem;
   line-height: 1.65;
-  color: #5b504e;
+  color: var(--muted);
   margin: 0;
-  text-align: ${(props) => props.textAlign ?? 'center'};
   white-space: pre-line;
   word-break: keep-all;
 `;

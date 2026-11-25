@@ -1,3 +1,19 @@
+:root {
+  --bg-outer: #eae7e0;
+  --paper: #fcfbf8;
+  --paper-alt: #f5f2eb;
+  --ink: #22201e;
+  --ink-soft: #4e4943;
+  --muted: #787168;
+  --accent: #253445;
+  --gold: #9a7f58;
+  --line: #e4ded3;
+  --font-serif: 'Gowun Batang', 'Noto Serif KR', Georgia, serif;
+  --font-display: 'Cormorant Garamond', 'Gowun Batang', serif;
+  --font-sans: 'Pretendard Variable', 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic',
+    system-ui, sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -11,10 +27,10 @@ body {
 }
 
 body {
-  font-family: 'SUITE-Regular', 'Apple SD Gothic Neo', 'Malgun Gothic', system-ui, sans-serif;
-  line-height: 1.6;
+  font-family: var(--font-sans);
+  line-height: 1.65;
   font-weight: 400;
-  color: #2f2120;
+  color: var(--ink);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,29 +40,11 @@ body {
   min-width: 280px;
   display: flex;
   justify-content: center;
-  background-color: #e0e7d9;
+  background-color: var(--bg-outer);
 }
 
 #root {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-
-@font-face {
-  font-family: 'HSSanTokki20-Regular';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2')
-    format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'SUITE-Regular';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2')
-    format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
 }

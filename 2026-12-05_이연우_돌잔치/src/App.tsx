@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import styled from '@emotion/styled';
 import ImageLightbox from '@/components/ImageLightbox.tsx';
-import Divider from '@/components/Divider.tsx';
-import { Heading1 } from '@/components/Text.tsx';
+import { Eyebrow, SectionTitle } from '@/components/Text.tsx';
 import Wrapper from '@/components/Wrapper.tsx';
 import Calendar from '@/layout/Calendar/Calendar.tsx';
 import Container from '@/layout/Container.tsx';
@@ -16,34 +15,34 @@ function App() {
 
   return (
     <Container>
-      <Wrapper>
-        <Main />
-      </Wrapper>
-      <Divider />
-      <Wrapper>
-        <Heading1>모시는 글</Heading1>
+      <Main />
+
+      <Wrapper tinted>
+        <Eyebrow>Invitation</Eyebrow>
+        <SectionTitle>모시는 글</SectionTitle>
         <Invitation />
       </Wrapper>
-      <Divider />
+
       <Wrapper>
-        <Heading1>첫돌의 기록</Heading1>
+        <Eyebrow>Portrait</Eyebrow>
+        <SectionTitle>첫돌의 기록</SectionTitle>
         <Gallery onZoom={(src, alt) => setZoomed({ src, alt })} />
       </Wrapper>
-      <Divider />
-      <Wrapper>
-        <Heading1>일시 안내</Heading1>
+
+      <Wrapper tinted>
+        <Eyebrow>The Day</Eyebrow>
+        <SectionTitle>일시 안내</SectionTitle>
         <Calendar />
       </Wrapper>
-      <Divider />
+
       <Wrapper>
-        <Heading1>오시는 길</Heading1>
+        <Eyebrow>Location</Eyebrow>
+        <SectionTitle>오시는 길</SectionTitle>
         <Location onZoom={(src, alt) => setZoomed({ src, alt })} />
       </Wrapper>
-      <Footer>
-        연우의 첫 생일을
-        <br />
-        함께 축복해 주셔서 감사합니다.
-      </Footer>
+
+      <Footer>연우의 첫 생일을 함께 축복해 주셔서 감사합니다.</Footer>
+
       <ImageLightbox
         src={zoomed?.src ?? null}
         alt={zoomed?.alt ?? ''}
@@ -56,9 +55,12 @@ function App() {
 export default App;
 
 const Footer = styled.footer`
-  padding: 10px 44px 48px;
-  font-size: 0.84rem;
-  line-height: 1.65;
-  color: #8a7f7c;
+  padding: 36px 24px 44px;
+  background-color: var(--paper-alt);
+  border-top: 1px solid var(--line);
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--muted);
   word-break: keep-all;
 `;
